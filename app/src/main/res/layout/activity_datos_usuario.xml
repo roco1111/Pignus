@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:background="@color/white"
+    android:paddingTop="10dp">
+
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <requestFocus />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+
+        <EditText
+            android:id="@+id/editTextNombre"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/campos_height"
+
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="@string/nombre_usuario"
+            android:inputType="textPersonName"
+            android:textColor="@color/colorDarkText"
+            android:textColorHint="@color/purple_500" />
+
+        <EditText
+            android:id="@+id/editTextMail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/campos_height"
+            android:layout_below="@+id/editTextNombre"
+            android:ems="10"
+            android:hint="@string/mail_cliente"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/colorDarkText"
+            android:textColorHint="@color/purple_500" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/login_password_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextMail"
+            android:textColor="@color/colorDarkText"
+            android:textColorHint="@color/purple_500"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/purple_500"
+            app:passwordToggleTintMode="src_in">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextClave"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/campos_height"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:ems="10"
+                android:hint="@string/clave_cliente"
+
+                android:inputType="textPassword"
+                android:textColor="@color/colorDarkText"
+                android:textColorHint="@color/purple_500"
+                tools:ignore="RtlHardcoded" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/login_confirmm_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_password_container"
+            android:layout_alignStart="@+id/login_password_container"
+            android:textColor="@color/colorDarkText"
+            android:textColorHint="@color/purple_500"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/purple_500"
+            app:passwordToggleTintMode="src_in">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextConfirmar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/campos_height"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:ems="10"
+                android:hint="@string/confirmar_cliente"
+
+                android:inputType="textPassword"
+                android:textColor="@color/colorDarkText"
+                android:textColorHint="@color/purple_500"
+                tools:ignore="RtlHardcoded" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <FrameLayout
+            android:id="@+id/idRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/alto_imagen"
+            android:layout_below="@+id/login_confirmm_container"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            >
+            <Button
+                android:id="@+id/buttonRegistro"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/alto_imagen"
+                android:background="@android:color/transparent"
+                android:drawableTop="@drawable/boton"
+                android:layout_marginTop="10dp"
+                tools:ignore="RtlHardcoded" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:textSize="@dimen/tamanio_parrafo"
+                android:textColor="@color/colorSecondaryText"
+                android:elevation="@dimen/elevation"
+                android:text="@string/menu_registro" />
+        </FrameLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
